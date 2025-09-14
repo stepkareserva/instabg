@@ -5,17 +5,101 @@
 <title>Insta Backgrounds</title>
 <style>
   body {
-  	text-align: center;
-  	margin: 0;
-  	padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #fff6d9, #d9f9f1, #ffe0f0);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: gradientShift 16s ease infinite;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
   }
-  img {
-  	max-width: 200px;
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    color: #222;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: #555;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: 1.9; /* увеличенный интервал */
+    margin: 12px 0;
+  }
+
+  .block {
+    text-align: left;
+    max-width: 650px; /* одинаковая ширина */
+    margin: 20px auto;
+    padding: 18px 24px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+
+  ol.block {
+    padding-left: 32px;
+    line-height: 1.9; /* тоже увеличенный интервал */
+  }
+
+  li {
+    margin: 12px 0;
+  }
+
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .note {
+    font-size: 0.9em;
+    color: #444;
   }
 </style>
 </head>
 <body>
-<h1> Hello from Insta Backgrounds </h>
-<h2> iOS shortcut to add solid backgrounds for your stories </h2>
+
+
+<h1>Hello from Insta Backgrounds!</h1>
+<h2>iOS shortcut to add solid backgrounds to your stories</h2>
+
+<div class="block">
+  <p>Ever tried posting a photo that isn’t 16:9 on your Insta story? That blurred background Instagram adds is... so boooring.</p>
+  <p>Solid backgrounds look way cleaner, but making them manually is a pain: add one image, paint it white, add another, repeat… Ugh. So I made a shortcut to handle it for you. Simple, fast, done.</p>
+</div>
+
+<h3>How to use:</h3>
+<ol class="block">
+  <li>Add the Shortcut on your iPhone: <a href="https://www.icloud.com/shortcuts/3c31f9bf71f1425daba228eaf6cd06b4" target="_blank">Get Insta BG</a></li>
+  <li>Open Shortcuts → Insta BG → ℹ️ → Show in Share Sheet → turn ON</li>
+  <li>Open Photos, select the images you want, then Share → Insta BG</li>
+  <li>Pick a background you like</li>
+  <li>…wait a moment…</li>
+  <li>Done! Your photos with backgrounds appear in the album <strong>"Insta Backgrounded"</strong></li>
+</ol>
+
+<h3>Advanced options:</h3>
+<ol class="block">
+  <li>Edit the set of available backgrounds:  
+    Open the folder <strong>Insta Background Templates</strong> on your iPhone and add or remove images.  
+    Each image should be 1080x1920. If there’s only one, it will be applied automatically; otherwise, you’ll choose each time.
+  </li>
+  <li>Adjust the width of the framed image:  
+    By default, the image width is 960px (9/10 of 1080). To change it: Shortcuts → Insta BG → ... → change the value 960 to what you want.
+  </li>
+</ol>
+
 </body>
 </html>
