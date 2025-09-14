@@ -1,105 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insta Backgrounds</title>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: linear-gradient(135deg, #fff6d9, #d9f9f1, #ffe0f0);
-    background-attachment: fixed;
-    background-size: 200% 200%;
-    animation: gradientShift 16s ease infinite;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-  }
-
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  h1 {
-    color: #222;
-    margin-bottom: 10px;
-  }
-  h2 {
-    color: #555;
-    font-weight: normal;
-    margin-bottom: 30px;
-  }
-  p {
-    line-height: 1.9; /* увеличенный интервал */
-    margin: 12px 0;
-  }
-
-  .block {
-    text-align: left;
-    max-width: 650px; /* одинаковая ширина */
-    margin: 20px auto;
-    padding: 18px 24px;
-    background: rgba(255,255,255,0.7);
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  }
-
-  ol.block {
-    padding-left: 32px;
-    line-height: 1.9; /* тоже увеличенный интервал */
-  }
-
-  li {
-    margin: 12px 0;
-  }
-
-  a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .note {
-    font-size: 0.9em;
-    color: #444;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Backgrounds - Fix Blurry Instagram Stories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --tiffany: #0abab5;
+            --tiffany-light: #e6f7f7;
+            --tiffany-dark: #089691;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            color: #212529;
+        }
+        .header {
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .step-card {
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            transition: transform 0.2s;
+        }
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+        .info-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: var(--tiffany);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-style: normal;
+            margin: 0 4px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .btn-primary {
+            background-color: var(--tiffany);
+            border-color: var(--tiffany);
+        }
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: var(--tiffany-dark);
+            border-color: var(--tiffany-dark);
+        }
+        .cta-button {
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .card-title {
+            color: var(--tiffany-dark);
+            font-weight: 600;
+        }
+        .display-5 {
+            color: var(--tiffany);
+        }
+        .section-title {
+            color: var(--tiffany-dark);
+            margin: 2rem 0 1.5rem;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Header -->
+                <div class="header text-center">
+                    <h1 class="display-5 fw-bold mb-3">Insta Backgrounds</h1>
+                    <p class="lead">An iOS shortcut to add clean, solid backgrounds to your Instagram stories</p>
+                </div>
+
+                <!-- Problem Section -->
+                <h4 class="section-title">The Annoying Problem</h5>
+                <div class="card step-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            When you post photos with non-standard aspect ratios to Instagram Stories, 
+                            you get those ugly blurred edges. Sure, you could use Instagram's workaround 
+                            (add an image, paint it white, add another image), but that's just cumbersome.
+                        </p>
+                    </div>
 
 
-<h1>Hello from Insta Backgrounds!</h1>
-<h2>iOS shortcut to add solid backgrounds to your stories</h2>
+                </div>
 
-<div class="block">
-  <p>Ever tried posting a photo that isn’t 16:9 on your Insta story? That blurred background Instagram adds is... so boooring.</p>
-  <p>Solid backgrounds look way cleaner, but making them manually is a pain: add one image, paint it white, add another, repeat… Ugh. So I made a shortcut to handle it for you. Simple, fast, done.</p>
-</div>
+                <!-- How to Use -->
+                <h4 class="section-title">The Simple Solution</h5>
+                
+                <div class="card step-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            I created a shortcut that automates the whole process. Now you can add clean, 
+                            solid backgrounds to your photos in just a few taps, without jumping through hoops.
+                        </p>
+                        <div class="text-center">
+                            <a href="https://www.icloud.com/shortcuts/a6155a765506495e95033c033da86cac" 
+                               class="btn btn-primary cta-button">
+                                Get the Shortcut
+                            </a>
+                        </div>
+                    </div>
 
-<h3>How to use:</h3>
-<ol class="block">
-  <li>Add the Shortcut on your iPhone: <a href="https://www.icloud.com/shortcuts/3c31f9bf71f1425daba228eaf6cd06b4" target="_blank">Get Insta BG</a></li>
-  <li>Open Shortcuts → Insta BG → ℹ️ → Show in Share Sheet → turn ON</li>
-  <li>Open Photos, select the images you want, then Share → Insta BG</li>
-  <li>Pick a background you like</li>
-  <li>…wait a moment…</li>
-  <li>Done! Your photos with backgrounds appear in the album <strong>"Insta Backgrounded"</strong></li>
-</ol>
+                    <div class="card-body">
+                        <h5 class="card-title">Add the Shortcut</h5>
+                        <p class="card-text">
+                            Tap the <strong>Get the Shortcut</strong> button above on your iPhone. It will open in the 
+                            Shortcuts app where you can add it to your library.
+                        </p>
+                    </div>
 
-<h3>Advanced options:</h3>
-<ol class="block">
-  <li>Edit the set of available backgrounds:  
-    Open the folder <strong>Insta Background Templates</strong> on your iPhone and add or remove images.  
-    Each image should be 1080x1920. If there’s only one, it will be applied automatically; otherwise, you’ll choose each time.
-  </li>
-  <li>Adjust the width of the framed image:  
-    By default, the image width is 960px (9/10 of 1080). To change it: Shortcuts → Insta BG → ... → change the value 960 to what you want.
-  </li>
-</ol>
+                    <div class="card-body">
+                        <h5 class="card-title">Enable in Share Sheet</h5>
+                        <p class="card-text">
+                            Open the Shortcuts app, find <strong>Insta BG</strong>, tap the <i class="info-icon">i</i> button, 
+                            then toggle on <strong>Show in Share Sheet</strong>.
+                        </p>
+                    </div>
 
+                    <div class="card-body">
+                        <h5 class="card-title">Use It from Photos</h5>
+                        <p class="card-text">
+                            Open your Photos app, select the image you want to modify, tap the Share button, 
+                            and choose <strong>Insta BG</strong> from the list of options.
+                        </p>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Select and Save</h5>
+                        <p class="card-text">
+                            Choose your preferred background color, wait a moment for processing, and find 
+                            your newly formatted image in the <strong>Insta Backgrounded</strong> album.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Advanced Options -->
+                <h4 class="section-title">Advanced Options</h4>
+                
+                <div class="card step-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Backgrounds</h5>
+                        <p class="card-text">
+                            You can customize the available backgrounds. In your iCloud, find the folder 
+                            named <strong>Insta Background Templates</strong> and add your own 1080x1920 images there. 
+                            If you only keep one image, it will be selected automatically.
+                        </p>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Adjust Image Size</h5>
+                        <p class="card-text">
+                            The default image width is set to 960px (8/9 of the Instagram Story width). 
+                            To change this, open the Shortcuts app, find <strong>Insta BG</strong>, tap <strong>...</strong>, find value 960, and modify it to your preferred width.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
