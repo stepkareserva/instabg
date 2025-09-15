@@ -1,189 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insta Backgrounds - Fix Blurry Instagram Stories</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <style>
-        :root {
-            --tiffany: #0abab5;
-            --tiffany-light: #e6f7f7;
-            --tiffany-dark: #089691;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            padding-top: 2rem;
-            padding-bottom: 3rem;
-            color: #212529;
-        }
-        .header {
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #dee2e6;
-        }
-        .step-card {
-            margin-bottom: 1.5rem;
-            border-radius: 0.5rem;
-            border: none;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-            transition: transform 0.2s;
-        }
-        .step-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-        }
-        .info-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            background-color: var(--tiffany);
-            color: white;
-            border-radius: 50%;
-            font-size: 0.8rem;
-            font-style: normal;
-            margin: 0 4px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        .btn-primary {
-            background-color: var(--tiffany);
-            border-color: var(--tiffany);
-        }
-        .btn-primary:hover, .btn-primary:focus {
-            background-color: var(--tiffany-dark);
-            border-color: var(--tiffany-dark);
-        }
-        .cta-button {
-            padding: 0.8rem 2rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            margin: 1.5rem 0;
-        }
-        .footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #dee2e6;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-        .card-title {
-            color: var(--tiffany-dark);
-            font-weight: 600;
-        }
-        .display-5 {
-            color: var(--tiffany);
-        }
-        .section-title {
-            color: var(--tiffany-dark);
-            margin: 2rem 0 1.5rem;
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insta Backgrounds - Fix Blurry Instagram Stories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .header p.lead {
+      font-size: 1.25rem;
+      color: #515154;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    .step-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #d2d2d7;
+      margin-bottom: 2rem;
+      padding: 2rem;
+    }
+    .step-card h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1d1d1f;
+    }
+    .step-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #515154;
+    }
+    .btn-apple {
+      background: #0071e3;
+      color: #fff;
+      border-radius: 980px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      transition: background 0.2s;
+    }
+    .btn-apple:hover {
+      background: #0077ed;
+      color: #fff;
+    }
+    .info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background-color: #e5e5ea;
+      color: #1d1d1f;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      margin: 0 4px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Header -->
-                <div class="header text-center">
-                    <h1 class="display-5 fw-bold mb-3">Insta Backgrounds</h1>
-                    <p class="lead">An iOS shortcut to add clean, solid backgrounds to your Instagram stories</p>
-                </div>
-
-                <!-- Problem Section -->
-                <h4 class="section-title">The Annoying Problem</h5>
-                <div class="card step-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            When you post photos with non-standard aspect ratios to Instagram Stories, 
-                            you get those ugly blurred edges. Sure, you could use Instagram's workaround 
-                            (add an image, paint it white, add another image), but that's just cumbersome.
-                        </p>
-                    </div>
-
-
-                </div>
-
-                <!-- How to Use -->
-                <h4 class="section-title">The Simple Solution</h5>
-                
-                <div class="card step-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            I created a shortcut that automates the whole process. Now you can add clean, 
-                            solid backgrounds to your photos in just a few taps, without jumping through hoops.
-                        </p>
-                        <div class="text-center">
-                            <a href="https://www.icloud.com/shortcuts/4913486c09494163a7b029fba3ba2e33" 
-                               class="btn btn-primary cta-button">
-                                Install the Shortcut
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">Setup the shortcut</h5>
-                        <p class="card-text">
-                            Tap the <strong>Install the Shortcut</strong> button above on your iPhone.
-                            It will openmin the Shortcuts app where you can add it to your library.
-                            Tap <strong>Skip Setup</strong>.
-                        </p>
-                        <p class="card-text">
-                            Run shortcut for the first time (tap <strong>Insta BG</strong> in shortcuts app) and allow everything it asks (it is request for downloading background images and sharing permissions).
-                        </p>
-                    </div>
-
-
-                    <div class="card-body">
-                        <h5 class="card-title">Use It from Photos</h5>
-                        <p class="card-text">
-                            Open your Photos app, select the image you want to modify, tap the Share button, 
-                            and choose <strong>Insta BG</strong> from the list of options.
-                        </p>
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">Select and Save</h5>
-                        <p class="card-text">
-                            Choose your preferred background color, wait a moment for processing, and find 
-                            your newly formatted image in the <strong>Insta Backgrounded</strong> album.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Advanced Options -->
-                <h4 class="section-title">Advanced Options</h4>
-                
-                <div class="card step-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Customize Shortcut</h5>
-                        <p class="card-text">
-                            Open the Shortcuts app, find <strong>Insta BG</strong>, tap the
-                            <i class="info-icon">&centerdot;&centerdot;&centerdot;</i> &rightarrow;<i class="info-icon">i</i> &rightarrow; <strong>setup</strong>
-                            &rightarrow; <strong>Customize Shortcut...</strong>
-                        </p>
-                        <p class="card-text">
-                            Select image width (frame width is 1080) and Sharing suggest option (set 0 to disable it)
-                        </p>
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">Custom Backgrounds</h5>
-                        <p class="card-text">
-                            You can customize the available backgrounds. In your iCloud, find the folder 
-                            named <strong>Insta Background Templates</strong> and add your own 1080x1920 images there. 
-                            If you only keep one image, it will be selected automatically.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Insta Backgrounds</h1>
+      <p class="lead">A clean iOS shortcut to fix blurry Instagram Stories</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Problem -->
+    <h4 class="section-title">Why this matters</h4>
+    <div class="step-card">
+      <p>
+        When you post photos with non-standard aspect ratios to Instagram Stories, 
+        you get those ugly blurred edges. Sure, you could use Instagram's manual hack, 
+        but that’s clunky and slow.
+      </p>
+    </div>
+
+    <!-- Solution -->
+    <h4 class="section-title">A simple solution</h4>
+    <div class="step-card text-center">
+      <p>
+        I made a shortcut that does all the work for you. Add solid backgrounds to your photos in just a few taps.
+      </p>
+      <a href="https://www.icloud.com/shortcuts/fde54fda8239482fa01305dd251449ab" 
+         class="btn btn-apple mt-3">
+        Install the Shortcut
+      </a>
+    </div>
+
+    <!-- Usage -->
+    <h4 class="section-title">How it works</h4>
+    <div class="step-card">
+      <h5>Setup</h5>
+      <p>Tap <strong>Install the Shortcut</strong> above on your iPhone. It will open in Shortcuts — just tap <strong>Skip Setup</strong>.</p>
+      <p>Run it once and allow permissions (download backgrounds, photo access, sharing).</p>
+    </div>
+    <div class="step-card">
+      <h5>Use from Photos</h5>
+      <p>Open Photos, select an image, tap Share, and choose <strong>Insta BG</strong>.</p>
+    </div>
+    <div class="step-card">
+      <h5>Select and Save</h5>
+      <p>Pick a background color, wait a moment, and find your new image in the <strong>Insta Backgrounded</strong> album — ready for Instagram.</p>
+    </div>
+
+    <!-- Advanced -->
+    <h4 class="section-title">Advanced Options</h4>
+    <div class="step-card">
+      <h5>Customize Shortcut</h5>
+      <p>
+        Open Shortcuts → <strong>Insta BG</strong> → <span class="info-icon">…</span> → <span class="info-icon">i</span> → <strong>Customize Shortcut</strong>.  
+        Here you can change the frame width (default is 1080).
+      </p>
+    </div>
+    <div class="step-card">
+      <h5>Custom Backgrounds</h5>
+      <p>
+        Add your own 1080x1920 images to the <strong>Insta Background Templates</strong> album.
+        If you have no plans for using some backgrounds, remove it from this album.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
