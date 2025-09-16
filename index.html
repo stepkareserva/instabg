@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<svg style="display:none">
+  <symbol id="icon-share" viewBox="0 0 48 48" fill="currentColor">
+    <path d="M30.3 13.7L25 8.4l-5.3 5.3-1.4-1.4L25 5.6l6.7 6.7z"/><path d="M24 7h2v21h-2z"/><path d="M35 40H15c-1.7 0-3-1.3-3-3V19c0-1.7 1.3-3 3-3h7v2h-7c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V19c0-.6-.4-1-1-1h-7v-2h7c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3z"/>
+  </symbol>
+</svg>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,6 +80,14 @@
       font-size: 0.85rem;
       margin: 0 4px;
     }
+    .icon-inline {
+      width: 1.5em;           
+      height: 1.5em;           
+      vertical-align: -0.35em;
+      stroke-width: 1.5;
+      stroke: currentColor;
+      fill: currentColor;
+    }
   </style>
 </head>
 <body>
@@ -101,7 +114,7 @@
       <p>
         I made a shortcut that does all the work for you. Add solid backgrounds to your photos in just a few taps.
       </p>
-      <a href="https://www.icloud.com/shortcuts/98b863f3352446a9afbe227146f25000" 
+      <a href="https://www.icloud.com/shortcuts/bdaf58838ef140ffa7ff28014e6d553a" 
          class="btn btn-apple mt-3">
         Install the Shortcut
       </a>
@@ -112,11 +125,13 @@
     <div class="step-card">
       <h5>Setup</h5>
       <p>Tap <strong>Install the Shortcut</strong> above on your iPhone. It will open in Shortcuts — just tap <strong>Skip Setup</strong>.</p>
-      <p>Run it once and allow permissions (download backgrounds, photo access, sharing).</p>
+      <p>Run it once and allow permissions (download backgrounds, photo access, etc).</p>
     </div>
     <div class="step-card">
       <h5>Use from Photos</h5>
-      <p>Open Photos, select an image, tap Share, and choose <strong>Insta BG</strong>.</p>
+      <p>Open Photos, select images, tap
+        <svg class="icon-inline"><use href="#icon-share"/></svg>
+        and choose <strong>Insta BG</strong>.</p>
     </div>
     <div class="step-card">
       <h5>Select and Save</h5>
@@ -135,7 +150,7 @@
     <div class="step-card">
       <h5>Custom Backgrounds</h5>
       <p>
-        Add your own 1080x1920 images to the <strong>Downloads → Insta Background Templates</strong>  folder. If you have no plans for using some backgrounds, remove it from this folder.
+        Add your own 1080x1920 images to the <strong>Insta Background Templates</strong> folder. If you have no plans for using some backgrounds, remove it from this folder.
       </p>
     </div>
   </div>
